@@ -8,10 +8,8 @@ function swap() {
     echo 'new text';
 }
 
-function anotherSwap() {
-    echo 'MORE NEW TEXT!!!';
-}
-
-function something() {
-    echo 'new text 123';
+function increment() {
+    $count = $_POST['value'];
+    $count++;
+    echo $count;
 }
