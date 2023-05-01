@@ -2,7 +2,14 @@
 <html lang="en">
     <head>
         <title>My page</title>
-        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+        <style>
+            button {
+                padding: 12px;
+                font-size: 16px;
+            }
+        </style>
     </head>
     <body>
         <button polar:click="swap">

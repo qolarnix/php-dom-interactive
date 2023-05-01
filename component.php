@@ -5,7 +5,7 @@ if(function_exists($_POST["function"])) {
 }
 
 function swap() {
-    echo 'new text';
+    echo 'Updated text from PHP';
 }
 
 function increment() {
