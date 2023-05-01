@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>My page</title>
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
     </head>
     <body>
         <button polar:click="swap">
@@ -12,36 +13,16 @@
             Click to swap another!
         </button>
 
-        <footer>
-            <script 
-                src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
-            </script>
+        <button polar:click="something">
+            Click
+        </button>
 
-            <script id="templateElms">
-                
-            </script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 
-            <script>
-                $("button[polar\\:click]").click(function() {
-                    var id = $(this).attr("id");
-                    var functionName = templateElements[id];
-
-                    $.ajax({
-                        type: "POST",
-                        url: "component.php",
-                        elmId: id,
-                        data: {
-                            function: functionName
-                        },
-                        success: function(result) {
-                            console.log(result);
-                            console.log(this.elmId);
-
-                            $("#" + this.elmId).html(result);
-                        }
-                    });
-                });
-            </script>
-        </footer>
+        <script id="templateElms">
+            var templateElements = templateElements || {};
+        </script>
+        
+        <script src="script.js" type="text/javascript"></script>
     </body>
 </html>

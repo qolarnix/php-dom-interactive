@@ -14,8 +14,7 @@ foreach($elements as $element) {
         $id = uniqid('polar_');
         $element->setAttribute('id', $id);
 
-        $js = "var templateElements = templateElements || {};"
-            . "templateElements['$id'] = '$click_elm';";
+        $js = "templateElements['$id'] = '$click_elm';";
 
         $fragment = $dom->createDocumentFragment();
         $fragment->appendChild($dom->createTextNode($js));
