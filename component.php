@@ -1,17 +1,17 @@
 <?php declare(strict_types=1);
 
-if($_POST["function"] == "swap") {
-    swap();
+if(function_exists($_POST["function"])) {
+    call_user_func($_POST["function"]);
 }
 
 function swap() {
     echo 'new text';
 }
 
-if($_POST["function"] == "anotherSwap") {
-    anotherSwap();
-}
-
 function anotherSwap() {
     echo 'MORE NEW TEXT!!!';
+}
+
+function something() {
+    echo 'new text 123';
 }
